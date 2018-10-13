@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+
+  redis:
+    image: redis
+    command: redis-server --appendonly yes
+
+  sixpack:
+    build:
+      context: .
+      dockerfile: Sixpack.docker
+    command: /run-sixpack.sh
+    ports:
+      - "5000:5000"
