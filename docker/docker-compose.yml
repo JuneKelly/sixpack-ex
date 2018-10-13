@@ -10,6 +10,14 @@ services:
     build:
       context: .
       dockerfile: Sixpack.docker
-    command: /run-sixpack.sh
+    command: sixpack
     ports:
       - "5000:5000"
+
+  sixpack_web:
+    build:
+      context: .
+      dockerfile: Sixpack.docker
+    command: sixpack-web
+    ports:
+      - "5001:5001"

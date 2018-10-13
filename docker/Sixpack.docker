@@ -1,7 +1,5 @@
 FROM ubuntu
 
 RUN apt update && apt install -y python python-pip && pip install sixpack
-
 ADD sixpack-conf.yml /etc/sixpack/config.yml
-ADD run-sixpack.sh /run-sixpack.sh
-RUN chmod +x /run-sixpack.sh
+ENV SIXPACK_CONFIG=/etc/sixpack/config.yml
