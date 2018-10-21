@@ -22,7 +22,11 @@ defmodule Sixpack.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:httpoison, "~> 1.0"}
+      {:httpoison, "~> 1.0"},
+      {:poison, "~> 4.0"},
+      {:poolboy, "~> 1.5"},
+      {:uuid, "~> 1.1"},
+      {:ex_doc, "~> 0.16", only: :dev}
     ]
   end
 end
